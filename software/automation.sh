@@ -8,7 +8,7 @@
 
 # ROOT FUNCTION!
 checkRoot() {
-  if [[ $EUID -ne 0 ]]; then #cheak if the user is rooted
+  if [[ $EUID -ne 0 ]]; then
     echo "rooted"
     clear
 
