@@ -12,7 +12,7 @@ checkRoot() {
     echo "rooted"
     clear
 
-  # Loading Animation
+    # Loading Animation
     echo "Launching."
     sleep 1
     clear
