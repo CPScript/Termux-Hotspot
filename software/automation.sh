@@ -33,19 +33,10 @@ checkRoot() {
   fi
 }
 
+
+
 # Call the function
 checkRoot
-
-
-
-
-
-
-
-
-
-
-
 
 # Define variables
 SSID="Your-Hotspot-Name" # SET THE NAME!
@@ -95,7 +86,7 @@ sudo iptables -A FORWARD -i eth0 -o $INTERFACE -j ACCEPT
 # Start web server
 python server.py &
 
-echo ""
+echo "BANNER GOES HERE!"
 echo "Hotspot and captive portal are now running."
 
 
