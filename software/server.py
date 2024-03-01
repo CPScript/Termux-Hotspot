@@ -17,7 +17,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         if self.path == '/login':
             form = cgi.FieldStorage(fp=self.rfile, headers=self.headers, environ={'REQUEST_METHOD': 'POST'})
             password = form.getvalue('password')
-            if password == 'YourPassword': # Replace 'YourPassword' with your actual password
+            if password == 'YourPassword': # Replace with your actual password (THE ONE YOU WILL SET WHEN STARTING THE 'hotspot.sh' FILE)
                 self.send_response(200)
                 self.send_header('Content-type', 'text/html')
                 self.end_headers()
