@@ -5,7 +5,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #333333;
+            background-color: #333333; /* Dark grey background */
             margin: 0;
             padding: 0;
             display: flex;
@@ -13,22 +13,22 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            color: #ffffff;
+            color: #ffffff; /* White text */
         }
         .container {
             text-align: center;
             padding: 20px;
-            background-color: #8B0000;
+            background-color: #8B0000; /* Dark red box */
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
             width: 80%;
             max-width: 400px;
         }
         h1 {
-            color: #ffffff;
+            color: #ffffff; /* White text */
         }
         p {
-            color: #ffffff;
+            color: #ffffff; /* White text */
         }
         .footer {
             position: fixed;
@@ -38,30 +38,30 @@
         }
         .footer-left {
             position: absolute;
-            left: 20px;
+            left: 10px;
         }
         .footer-right {
             position: absolute;
-            right: 20px;
+            right: 10px;
         }
         a {
-            color: #ffffff;
+            color: #ffffff; /* White text */
             text-decoration: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Free Termux Hotspot</h1>
-        <p>Please enter the password to connect!:</p>
+        <h1>Welcome to the Wi-Fi Hotspot</h1>
+        <p>Please enter the password to access the internet:</p>
         <form action="/login" method="post">
             <input type="password" name="password" required>
             <input type="submit" value="Login">
         </form>
     </div>
     <div class="footer">
-        <div class="footer-left"><a href="https://github.com/CPScript/Termux-Hotspot">Click me to setup your own Hotspot!</a></div>
-        <div class="footer-right">2024 Termux-Hotspot | By - CPScript
+        <div class="footer-left"><a href="https://example.com/privacy">Privacy Policy</a></div>
+        <div class="footer-right">Designed by YourName</div>
     </div>
 </body>
 </html>
