@@ -1,5 +1,3 @@
-i will update the software's readme soon!
-
 # USING INTERNET CONNECTION
 > host a hotspot using a network connection from a router
 
