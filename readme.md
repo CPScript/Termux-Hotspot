@@ -1,3 +1,5 @@
+i will update the software's readme soon!
+
 # USING INTERNET CONNECTION
 > host a hotspot using a network connection from a router
 
@@ -71,7 +73,6 @@ To assign IP addresses to devices connecting to your hotspot, you can use a `DHC
 ### Security Considerations
 Creating a hotspot exposes your device to potential security risks, especially if it's connected to the internet. Ensure you have strong security measures in place, such as using `WPA2` for encryption and regularly updating your hotspot's software.
 
-> NOTE: i made this so i can try to make a software to create a hotspot without the user acctualy having to pay for one (probably wont tho :'( ) 
 
 
 
