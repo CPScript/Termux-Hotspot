@@ -94,9 +94,12 @@ sudo iptables -A FORWARD -i eth0 -o $INTERFACE -j ACCEPT
 # Start web server
 python server.py &
 
-echo ""
+echo "Done!"
+clear
 echo "Hotspot Started"
 echo "Captcha Portal Started"
+echo " "
+echp "You can now have other devices connect!"
 
 
 # © 2024 Termux-Hotspot | by - CPScript/Disease
