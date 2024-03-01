@@ -2,13 +2,65 @@
 <html>
 <head>
     <title>Captive Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .footer-left {
+            position: absolute;
+            left: 20px;
+        }
+        .footer-right {
+            position: absolute;
+            right: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to the Wi-Fi Hotspot</h1>
-    <p>Please enter the password to access the internet:</p>
-    <form action="/login" method="post">
-        <input type="password" name="password" required>
-        <input type="submit" value="Login">
-    </form>
+    <div class="container">
+        <h1>Free Termux Hotspot</h1>
+        <p>Please enter the password to connect!:</p>
+        <form action="/login" method="post">
+            <input type="password" name="password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <div class="footer">
+        <div class="footer-left"><a href="https://github.com/CPScript/Termux0Hotspot">Click me to setup your own Hotspot!</a></div>
+        <div class="footer-right">2024 Termux-Hotspot | By - CPScript
+    </div>
 </body>
 </html>
