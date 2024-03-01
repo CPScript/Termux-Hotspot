@@ -4,8 +4,6 @@
 # All comments here are to help users understand how it works!
 
 
-
-
 # ROOT FUNCTION!
 checkRoot() {
   if [[ $EUID -ne 0 ]]; then
@@ -27,7 +25,7 @@ checkRoot() {
     clear
 
   else
-    # Not rooted message | How to root
+    # Not rooted message
     echo "Please root!"
     sleep 2
   fi
@@ -38,10 +36,20 @@ checkRoot() {
 # Call the function
 checkRoot
 
-# Define variables
-SSID="Your-Hotspot-Name" # SET THE NAME!
-PASSWORD="Your-Password" # SET A PASSWORD!
-CHANNEL=7
+# Prompt the user for the hotspot name and password
+echo "Set Name:"
+read SSID
+echo "Set Password::"
+read PASSWORD
+
+# Prompt for additional configuration options
+echo "Enter the channel (default is 7):"
+read CHANNEL
+if [ -z "$CHANNEL" ]; then
+    CHANNEL=7
+fi
+
+# Define other variables
 INTERFACE="wlan0"
 DHCP_RANGE="192.168.1.2,192.168.1.100,255.255.255.0,12h"
 
@@ -86,8 +94,9 @@ sudo iptables -A FORWARD -i eth0 -o $INTERFACE -j ACCEPT
 # Start web server
 python server.py &
 
-echo "BANNER GOES HERE!"
-echo "Hotspot and captive portal are now running."
+echo ""
+echo "Hotspot Started"
+echo "Captcha Portal Started"
 
 
 # © 2024 Termux-Hotspot | by - CPScript/Disease
