@@ -7,7 +7,9 @@
 # ROOT FUNCTION!
 checkRoot() {
   if [[ $EUID -ne 0 ]]; then
+    clear
     echo "rooted"
+    sleep 1
     clear
 
     # Loading Animation
@@ -35,7 +37,6 @@ checkRoot() {
 
 # Call the function
 checkRoot
-
 # Prompt the user for the hotspot name and password
 echo "Set Name:"
 read SSID
