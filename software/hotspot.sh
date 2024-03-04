@@ -3,8 +3,6 @@
 # This bash script will automate the process of setting everyting up, all you have to do is set the name and password
 # All comments here are to help users understand how it works!
 
-# create auto root option 
-# create auto check accesabilitys
 
 # CHECK-ROOT FUNCTION!
 checkRoot() {
@@ -39,6 +37,7 @@ checkRoot() {
 
 # Call the function
 checkRoot
+
 # Prompt the user for the hotspot name and password
 echo "Set Name:"
 read SSID
