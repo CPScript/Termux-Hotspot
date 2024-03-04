@@ -21,12 +21,12 @@ class RequestHandler(BaseHTTPRequestHandler):
                 self.send_response(200)
                 self.send_header('Content-type', 'text/html')
                 self.end_headers()
-                self.wfile.write(b'<html><body><h1>Connected</h1></body></html>')
+                self.wfile.write(b'<html><body><h1>Connected, you now have access to the internet!</h1></body></html>')
             else:
                 self.send_response(401)
                 self.send_header('Content-type', 'text/html')
                 self.end_headers()
-                self.wfile.write(b'<html><body><h1>Denied</h1></body></html>')
+                self.wfile.write(b'<html><body><h1>Denied, please retry!</h1></body></html>')
         else:
             self.send_response(404)
             self.end_headers()
@@ -34,7 +34,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 def run(server_class=HTTPServer, handler_class=RequestHandler, port=80):
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    print(f'Starting httpd on port {port}...')
+    print(f'Starting httpd on port: {port}, please wait...')
     httpd.serve_forever()
 
 if __name__ == '__main__':
