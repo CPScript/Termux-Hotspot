@@ -1,5 +1,7 @@
+> WARNING! This information can be used for phishing attacks, phone camera hacking, and malicious `apk` file downloads, please be cautious and don't download anything if asked to by a webpage to allow you to connect!
+
 # USING INTERNET CONNECTION
-> host a hotspot using a network connection from a router
+> ABOUT: Information on how to `host a hotspot using a network connection from a router/data for free using Termux`
 
 ## Step 1: Install Termux
 First, ensure you have Termux installed on your Android device. If you don't have it yet, you can download it from the Google Play Store or F-Droid.
