@@ -73,8 +73,10 @@ To assign IP addresses to devices connecting to your hotspot, you can use a `DHC
 ### Security Considerations
 Creating a hotspot exposes your device to potential security risks, especially if it's connected to the internet. Ensure you have strong security measures in place, such as using `WPA2` for encryption and regularly updating your hotspot's software.
 
+---
 
-
+### Contibutions
+> If you would like to contribute to better create a pull request with your changes
 
 
 
