@@ -36,7 +36,7 @@ setupHostapd() {
   wpa_key_mgmt=WPA-PSK
   wpa_pairwise=TKIP
   rsn_pairwise=CCMP
-  EOL
+EOL
 
   sudo hostapd $HOSTAPD_CONF &
 }
@@ -46,7 +46,7 @@ setupDnsmasq() {
   cat > $DNSMASQ_CONF <<EOL
   interface=$INTERFACE
   dhcp-range=$DHCP_RANGE
-  EOL
+EOL
 
   sudo dnsmasq &
 }
@@ -57,8 +57,6 @@ setupIPForwarding() {
   sudo iptables -A FORWARD -i $INTERFACE -o eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
   sudo iptables -A FORWARD -i eth0 -o $INTERFACE -j ACCEPT
 }
-
-# Main Script
 
 # Check root privileges
 checkRoot
