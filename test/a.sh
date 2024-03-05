@@ -21,34 +21,34 @@ checkCommand() {
 
 # Function to set up hostapd
 setupHostapd() {
-  cat > $HOSTAPD_CONF <<EOL
-  interface=$INTERFACE
-  driver=nl80211
-  ssid=$SSID
-  hw_mode=g
-  channel=$CHANNEL
-  wmm_enabled=0
-  macaddr_acl=0
-  auth_algs=1
-  ignore_broadcast_ssid=0
-  wpa=2
-  wpa_passphrase=$PASSWORD
-  wpa_key_mgmt=WPA-PSK
-  wpa_pairwise=TKIP
-  rsn_pairwise=CCMP
+cat > $HOSTAPD_CONF <<EOL
+interface=$INTERFACE
+driver=nl80211
+ssid=$SSID
+hw_mode=g
+channel=$CHANNEL
+wmm_enabled=0
+macaddr_acl=0
+auth_algs=1
+ignore_broadcast_ssid=0
+wpa=2
+wpa_passphrase=$PASSWORD
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
 EOL
 
-  sudo hostapd $HOSTAPD_CONF &
+sudo hostapd $HOSTAPD_CONF &
 }
 
 # Function to set up dnsmasq
 setupDnsmasq() {
-  cat > $DNSMASQ_CONF <<EOL
-  interface=$INTERFACE
-  dhcp-range=$DHCP_RANGE
+cat > $DNSMASQ_CONF <<EOL
+interface=$INTERFACE
+dhcp-range=$DHCP_RANGE
 EOL
 
-  sudo dnsmasq &
+sudo dnsmasq &
 }
 
 # Function to set up IP forwarding and NAT
