@@ -92,8 +92,14 @@ setupDnsmasq
 setupIPForwarding
 
 # Start web server
+echo "starting server.py"
+sleep 1
 python server.py &
 
-echo "Hotspot Started"
+# Alert
 echo "Captcha Portal Started"
+sleep 1
+clear
+
+echo "Your hotspot is up and running, please be responsible"
 echo "You can now have other devices connect!"
