@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# -------------- FUNCTIONS --------------
+# This is where the functions are located
+# ---------------------------------------
+
+
 # Constants and Variables
 HOSTAPD_CONF="/etc/hostapd/hostapd.conf"
 DNSMASQ_CONF="/etc/dnsmasq.conf"
@@ -16,7 +21,7 @@ checkRoot() {
 
 # Function to check command existence
 checkCommand() {
-  command -v $1 > /dev/null 2>&1 || { echo >&2 "$1 is not installed. Aborting."; exit 1; }
+  command -v $1 > /dev/null 2>&1 || { echo >&2 "$1 is not installed. Aborting!"; exit 1; }
 }
 
 # Function to set up hostapd
@@ -58,22 +63,32 @@ setupIPForwarding() {
   sudo iptables -A FORWARD -i eth0 -o $INTERFACE -j ACCEPT
 }
 
+# -------------- MAIN --------------
+# Running the functions & other code
+# ----------------------------------
+
 # Check root privileges
 checkRoot
 
 # Check required commands
 checkCommand "hostapd"
+echo "installed!"
+clear
 checkCommand "dnsmasq"
+echo "installed!"
+clear
 checkCommand "python"
+echo "installed!"
+clear
 
 # Prompt the user for hotspot name and password
-echo "Set Name:"
+echo "> Set Name <"
 read -r SSID
-echo "Set Password:"
+echo "> Set Password <"
 read -r PASSWORD
 
 # Prompt for additional configuration options
-echo "Enter the channel (default is 7):"
+echo "Enter channel (default is 7):"
 read -r CHANNEL
 CHANNEL=${CHANNEL:-7}
 
@@ -91,13 +106,12 @@ setupIPForwarding
 
 # Start web server
 echo "starting server.py"
-sleep 1
+clear
 python server.py &
 
 # Alert
 echo "Captcha Portal Started"
-sleep 1
 clear
 
-echo "Your hotspot is up and running, please be responsible"
-echo "You can now have other devices connect!"
+echo "Your hotspot is up and running!"
+echo "You can now have other devices connect."
