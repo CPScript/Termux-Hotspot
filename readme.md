@@ -1,7 +1,7 @@
 > WARNING! This information can be used for phishing attacks, phone camera hacking, and malicious `apk` file downloads, please be cautious and don't download anything if asked to by a webpage when you try to connect to a internet connection!
 
 # SOFTWARE
-[Click me! To go to folder](cpscript.github.io/Termux-Hotspot/software)
+[Click me! To go to folder](https://github.com/CPScript/Termux-Hotspot/tree/main/software)
 
 # DO IT YOURSELF!
 > ABOUT: Information on how to `host a hotspot using a network connection from a router/data for free using Termux`
