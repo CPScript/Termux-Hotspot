@@ -1,6 +1,9 @@
 > WARNING! This information can be used for phishing attacks, phone camera hacking, and malicious `apk` file downloads, please be cautious and don't download anything if asked to by a webpage when you try to connect to a internet connection!
 
-# USING INTERNET CONNECTION
+# SOFTWARE
+[Click me! To go to folder](cpscript.github.io/Termux-Hotspot/software)
+
+# DO IT YOURSELF!
 > ABOUT: Information on how to `host a hotspot using a network connection from a router/data for free using Termux`
 
 ## Step 1: Install Termux
